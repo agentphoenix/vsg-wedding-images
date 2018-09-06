@@ -1,11 +1,11 @@
 <template>
 	<div>
 		<div class="field-group">
-			<input type="text" class="field" name="first_name" placeholder="First Name" required autofocus v-model="firstName">
+			<input type="text" class="field outline-none" name="first_name" placeholder="First Name" required autofocus v-model="firstName">
 		</div>
 
 		<div class="field-group">
-			<input type="text" class="field" name="last_name" placeholder="Last Name" required v-model="lastName">
+			<input type="text" class="field outline-none" name="last_name" placeholder="Last Name" required v-model="lastName">
 		</div>
 
 		<transition name="custom-classes-transition"
