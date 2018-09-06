@@ -1,0 +1,101 @@
+@grid-columns: 12;
+
+.buildColumns (@i) when (@i > 0) {
+	@responsive {
+		.col-@{i} {
+			flex-basis: percentage((@i / 12));
+			max-width: percentage((@i / 12));
+		}
+	}
+
+	.buildColumns (@i - 1);
+}
+
+.buildColumnOffsets (@i) when (@i > 0) {
+	@responsive {
+		.col-offset-@{i} {
+			margin-left: percentage((@i / 12));
+		}
+	}
+
+	.buildColumnOffsets (@i - 1);
+}
+
+.row {
+	@apply .flex .flex-wrap .-mx-4;
+}
+
+.no-gutters {
+	@apply .mx-0;
+
+	> .col,
+	> [class*="col-"] {
+		@apply .px-0;
+	}
+}
+
+@responsive {
+	// .row.start {
+	// 	@apply .justify-start;
+	// }
+
+	// .row.center {
+	// 	@apply .justify-center;
+	// }
+
+	// .row.end {
+	// 	@apply .justify-end;
+	// }
+
+	// .row.top {
+	// 	@apply .items-start;
+	// }
+
+	// .row.middle {
+	// 	@apply .items-center;
+	// }
+
+	// .row.bottom {
+	// 	@apply .items-end;
+	// }
+
+	// .row.around {
+	// 	@apply .justify-around;
+	// }
+
+	// .row.between {
+	// 	@apply .justify-between;
+	// }
+
+	// .row.first {
+	// 	order: -1;
+	// }
+
+	// .row.last {
+	// 	order: 1;
+	// }
+
+	.row.reverse {
+		@apply .flex-row-reverse;
+	}
+}
+
+.col,
+[class*="col-"] {
+	@apply .relative .w-full .px-4;
+
+	min-height: 1px;
+}
+
+@responsive {
+	.col {
+		@apply .flex-1;
+	}
+
+	.col-auto {
+		@apply .flex-shrink .flex-no-grow .w-auto;
+	}
+}
+
+.buildColumns (@grid-columns);
+.buildColumnOffsets (@grid-columns - 1);

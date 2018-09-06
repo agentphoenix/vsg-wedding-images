@@ -1,0 +1,136 @@
+@tailwind preflight;
+
+header {
+	background: rgba(255, 255, 255, .9);
+}
+
+img {
+	@apply .max-w-full;
+}
+
+.feather {
+	width: 24px;
+	height: 24px;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
+.title {
+	@apply .block .text-guava-dark .font-sans .font-black .text-4xl;
+}
+
+.subtitle {
+	@apply .block .text-guava-light .font-normal .text-2xl;
+}
+
+a {
+	@apply .no-underline;
+}
+
+.outline-none {
+	outline: none !important;
+}
+
+.transition {
+	transition: all .1s ease-in;
+}
+
+.transition-box-shadow {
+	transition: box-shadow .15s ease;
+}
+
+.transition-slow {
+	transition: all .2s ease-in;
+}
+
+.VueCarousel-slide {
+	&:hover {
+		cursor: move;
+		cursor: grab;
+	}
+}
+
+.swiper-slide-counter {
+	@apply .absolute .pin-t .pin-r .rounded-full .text-white .py-1 .px-3 .text-xs .m-3;
+
+	background: rgba(0, 0, 0, .65);
+}
+
+[v-cloak] {
+	display: none;
+}
+
+.card {
+	@apply .mb-6 .bg-white .shadow-stripe-md .rounded .overflow-hidden;
+}
+
+.nav-link {
+	@apply .flex .flex-row .items-center .justify-start .text-grey-dark .mb-2 .rounded;
+
+	.nav-icon {
+		@apply .h-6 .w-6;
+	}
+
+	.nav-text {
+		@apply .block .ml-3;
+	}
+
+	&:hover {
+		@apply .text-grey-darker;
+	}
+}
+
+@screen md {
+	.nav-link {
+		@apply .mb-6 .justify-center .flex-col .text-center .text-xs .font-medium;
+
+		.nav-icon {
+			@apply .h-8 .w-8;
+		}
+
+		.nav-text {
+			@apply .ml-0 .mt-1 .text-grey;
+		}
+
+		&:hover {
+			.nav-text {
+				@apply .text-grey-dark;
+			}
+		}
+	}
+}
+
+@screen lg {
+	.nav-link {
+		@apply .mb-2 .p-2 .justify-start .flex-row .text-base;
+
+		.nav-icon {
+			@apply .h-6 .w-6;
+		}
+
+		.nav-text {
+			@apply .ml-3 .mt-0 .text-grey-dark;
+		}
+
+		&:hover {
+			@apply .bg-grey-light;
+
+			.nav-text {
+				@apply .text-grey-darker;
+			}
+		}
+	}
+}
+
+@import 'components/button.less';
+@import 'components/dropdown.less';
+@import 'components/forms.less';
+@import 'components/grid.less';
+// @import 'components/nav.less';
+
+@tailwind components;
+
+@tailwind utilities;

@@ -1,0 +1,11 @@
+/public/css
+/public/js
+/public/storage
+/node_modules
+/vendor
+
+/public/mix-manifest.json
+.DS_Store
+.env
+npm-debug.log
+yarn-error.log

@@ -1,0 +1,67 @@
+.button {
+	@apply .inline-flex
+		   .justify-center
+		   .items-center
+		   .rounded
+		   .text-base
+		   .p-3
+		   .shadow-stripe-sm
+		   .uppercase
+		   .font-medium
+		   .leading-normal;
+
+	letter-spacing: .035rem;
+	transition: all .15s ease;
+
+	&:hover {
+		@apply .shadow-stripe-md;
+
+		transform: translateY(-1px);
+	}
+
+	&.is-block {
+		@apply .flex .w-full;
+	}
+
+	&.is-primary {
+		@apply .bg-guava .text-guava-lightest;
+
+		&:hover {
+			@apply .text-guava-lightest .bg-guava-dark;
+		}
+
+		&.is-inverted {
+			@apply .bg-white .text-guava;
+
+			&:hover {
+				@apply .text-guava-dark;
+			}
+		}
+	}
+
+	&.is-secondary {
+		@apply .bg-blue .text-blue-lighter;
+
+		&:hover {
+			@apply .text-blue-lightest .bg-blue-dark;
+		}
+
+		&.is-inverted {
+			@apply .bg-white .text-blue;
+
+			&:hover {
+				@apply .text-blue-dark;
+			}
+		}
+
+		// transition-slow block w-full py-3 md:py-4 lg:py-3 flex items-center justify-center bg-blue text-blue-lighter rounded mb-12 shadow-stripe-xs hover:bg-blue-dark hover:text-blue-lightest hover:shadow-stripe-sm
+	}
+
+	&.is-subtle {
+		@apply .bg-white .text-grey-dark;
+
+		&:hover {
+			@apply .text-grey-darker;
+		}
+	}
+}
