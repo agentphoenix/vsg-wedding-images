@@ -14,16 +14,16 @@
 	<link href="{{ asset('css/vendor.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-	<div id="app" class="flex flex-col justify-center h-screen w-full bg-sunset">
-		<div class="sm:w-3/5 lg:w-2/5 sm:mx-auto sm:bg-white sm:rounded sm:px-4 sm:py-6 sm:shadow-stripe-lg">
+<body class="bg-grey-lighter font-sans text-grey-darkest">
+	<div id="app" class="flex flex-col justify-center h-screen w-full">
+		<div class="w-full mx-auto px-4 py-6">
 			<div class="block w-full">
 				<h1 class="text-center title">Leah &amp; David</h1>
 				<div class="text-center subtitle">9.8.18</div>
 			</div>
 
 			<div class="block w-4/5 mx-auto text-center my-8">
-				@svg('monogram', 'h-32 w-32 fill-current text-guava')
+				@svg('monogram', 'h-32 w-32 fill-current text-guava-dark')
 			</div>
 
 			@if (session('error'))
