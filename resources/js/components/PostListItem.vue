@@ -89,9 +89,9 @@ export default {
                     if (slide.isActive) {
                         const element = slide.$el;
 
-                        console.log(element.getBoundingClientRect());
+                        // console.log(element.getBoundingClientRect());
 
-                        element.setAttribute('style', 'border:1px solid red');
+                        // element.setAttribute('style', 'border:1px solid red');
                     }
                 });
             }
