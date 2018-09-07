@@ -40,7 +40,7 @@
 				<sign-in-fields></sign-in-fields>
 
 				<div>
-					<button type="submit" class="button is-primary is-block">Sign In</button>
+					<button type="submit" class="rounded w-full p-4 bg-guava-dark text-white font-medium text-sm uppercase tracking-wide hover:bg-guava">Sign In</button>
 				</div>
 
 				{{ svg_spritesheet() }}
