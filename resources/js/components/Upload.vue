@@ -52,13 +52,13 @@ export default {
             this.formData.append('caption', caption);
 
             App.request().post(route('posts.store'), this.formData)
-            .then(({data}) => {
+            .then(() => {
                 this.showModal = false;
 
                 window.location.reload();
             })
             .catch((error) => {
-                //
+                console.error(error);
             });
         }
     }

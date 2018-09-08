@@ -79,6 +79,7 @@ export default {
         },
 
         save () {
+            alert('Saving...');
             this.$emit('save', this.caption);
         }
     }
