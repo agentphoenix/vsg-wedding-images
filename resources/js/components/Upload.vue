@@ -53,7 +53,7 @@ export default {
 
             App.request().post(route('posts.store'), this.formData)
             .then(() => {
-                this.showModal = false;
+                // this.showModal = false;
 
                 window.location.reload();
             })
