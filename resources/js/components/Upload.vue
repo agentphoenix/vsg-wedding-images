@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import axios from '@/util/axios';
 import App from '../vsg';
 import Modal from './Modal';
 
@@ -53,7 +54,7 @@ export default {
         upload (caption) {
             this.formData.append('caption', caption);
 
-            App.request().post(route('posts.store'), this.formData)
+            axios.post(route('posts.store'), this.formData)
             .then(() => {
                 this.showModal = false;
 
