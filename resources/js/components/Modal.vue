@@ -14,11 +14,12 @@
                         ></textarea>
                     </div>
                     <div class="flex">
-                        <button class="w-full p-4 bg-guava-dark text-white font-medium text-sm uppercase tracking-wide hover:bg-guava"
-                                @click="save"
+                        <a href="#"
+                           class="w-full p-4 bg-guava-dark text-white font-medium text-sm uppercase tracking-wide hover:bg-guava"
+                           @click.prevent="save"
                         >
                             Add Post
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
