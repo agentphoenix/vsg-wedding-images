@@ -45,7 +45,9 @@ export default {
                     return this.formData.append(fieldName, fileList[x], fileList[x].name);
                 });
 
-            this.showModal = true;
+            this.upload('');
+
+            // this.showModal = true;
         },
 
         upload (caption) {
@@ -53,7 +55,7 @@ export default {
 
             App.request().post(route('posts.store'), this.formData)
             .then(() => {
-                // this.showModal = false;
+                this.showModal = false;
 
                 window.location.reload();
             })
