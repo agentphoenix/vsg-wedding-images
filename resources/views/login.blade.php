@@ -34,7 +34,7 @@
 				</div>
 			@endif
 
-			{{-- <form method="POST" action="{{ route('authenticate') }}" class="block w-full px-6">
+			<form method="POST" action="{{ route('authenticate') }}" class="block w-full px-6">
 				@csrf
 
 				<sign-in-fields></sign-in-fields>
@@ -44,13 +44,13 @@
 				</div>
 
 				{{ svg_spritesheet() }}
-			</form> --}}
+			</form>
 
-			<div class="text-lg leading-normal">
+			{{-- <div class="text-lg leading-normal">
 				<p class="mb-6">Dear family and friends,</p>
 
 				<p>We had hoped to provide a fun way to share your photos with us from this weekend through this website. Unfortunately, due to some technical issues out of our control, the image uploads won't work on iOS this weekend. We sincerely apologize for this and look forward to seeing your pictures and videos from the weekend!</p>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 
